@@ -2,7 +2,9 @@
 
 namespace VirtusPay\ApiSDK\Model;
 
-class PreAprovacao
+use VirtusPay\ApiSDK\Api\ModelInterface;
+
+class PreAprovacao implements ModelInterface
 {
 
     private $total_amount;

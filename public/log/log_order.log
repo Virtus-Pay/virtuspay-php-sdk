@@ -1,0 +1,3 @@
+[2021-09-07T20:28:28.084188+00:00] log_order.WARNING: Client error: `POST https://hml.usevirtus.com.br/api/v1/order` resulted in a `400 Bad Request` response: {}  [] []
+[2021-09-07T20:29:02.085753+00:00] log_order.WARNING: Client error: `POST https://hml.usevirtus.com.br/api/v1/order` resulted in a `400 Bad Request` response: {}  [] []
+[2021-09-07T20:31:50.329771+00:00] log_order.WARNING: Client error: `POST https://hml.usevirtus.com.br/api/v1/order` resulted in a `400 Bad Request` response: {}  [] []

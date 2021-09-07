@@ -2,8 +2,9 @@
 
 namespace VirtusPay\ApiSDK\Model;
 
+use VirtusPay\ApiSDK\Api\ModelInterface;
 
-class Installments
+class Installments implements ModelInterface
 {
 
     private $total_amount;
