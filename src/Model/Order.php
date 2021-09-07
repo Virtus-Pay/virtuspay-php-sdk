@@ -70,8 +70,6 @@ class Order implements ModelInterface
         $data['channel'] = $this->channel;
         $data['preapproved'] = $this->preapproved;
 
-//        return $data;
-
         return json_encode($data);
 
     }
