@@ -24,4 +24,10 @@ class Cancelamento
         $body = $modelCancelamento->getEncodeParams();
         return $this->gateway->execute('PUT', $uri, $body, $this->configuration::TOKEN);
     }
+
+    public function getStatusOrder($transaction)
+    {
+        $uri = $this->configuration->getBaseUrl()."v1/order/".$transaction."/void";
+        return $this->gateway->execute('GET', $uri, "", $this->configuration::TOKEN);
+    }
 }
