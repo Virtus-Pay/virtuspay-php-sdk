@@ -32,8 +32,7 @@ class Gateway
 
             return $response->getBody()->__toString();
         } catch (\Exception $e) {
-            echo $e->getMessage();
-            exit;
+            return $e->getMessage();
         }
     }
 }
