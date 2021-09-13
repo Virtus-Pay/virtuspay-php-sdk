@@ -1,5 +1,5 @@
 {
-  "name": "virtus-Pay/virtuspay-php-sdk",
+  "name": "virtus-pay/virtuspay-php-sdk",
   "description": "Biblioteca de integração com a Virtuspay",
   "type": "library",
   "keywords": ["virtuspay","pay", "payment", "sdk"],
