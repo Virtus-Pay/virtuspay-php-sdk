@@ -36,10 +36,10 @@ $customer = new \VirtusPay\ApiSDK\Model\Customer(
 );
 
 $order = new \VirtusPay\ApiSDK\Model\Order(
-    "304560857201-2", $customer, $deliveryAddress, $modelItems, 2000.20, 12,
+    "304560857291-4", $customer, $deliveryAddress, $modelItems, 2000.20, 12,
     "Roupa branca, Roupa preta", "https://www.minhaloja.com.br/api2/virtus_callback",
-    "https://www.minhaloja.com.br/checkout?order=304560857201&closed=true", "checkout",
-    "c00bd4dc-4342-496e-818d-57b6ede56ef2"
+    "https://www.minhaloja.com.br/checkout?order=304560857291&closed=true", "checkout",
+    null
 );
 
 $gateway = new \VirtusPay\ApiSDK\Gateway\Order();

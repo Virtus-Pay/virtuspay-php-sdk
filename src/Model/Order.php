@@ -68,7 +68,10 @@ class Order implements ModelInterface
         $data['callback'] = $this->callback;
         $data['return_url'] = $this->return_url;
         $data['channel'] = $this->channel;
-        $data['preapproved'] = $this->preapproved;
+
+        if (!is_null($this->preapproved)) {
+           $data['preapproved'] = $this->preapproved;
+        }
 
         return json_encode($data);
 
