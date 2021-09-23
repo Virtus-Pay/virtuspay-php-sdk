@@ -21,6 +21,6 @@ class Financeiro
     public function execute($data_gte, $data_lte)
     {
         $uri = $this->configuration->getBaseUrl()."v1/agenda?previsao_liquidacao_gte=".$data_gte."&previsao_liquidacao_lte=".$data_lte;
-        return $this->gateway->execute('GET', $uri, "", $this->configuration::TOKEN);
+        return $this->gateway->execute('GET', $uri, "", $this->configuration->getToken());
     }
 }

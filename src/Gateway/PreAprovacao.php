@@ -22,7 +22,7 @@ class PreAprovacao
 
         $gateway = new GatewaySend();
 
-        return $gateway->execute('POST', $uri, $body, $this->configuration::TOKEN);
+        return $gateway->execute('POST', $uri, $body, $this->configuration->getToken());
     }
 
 }

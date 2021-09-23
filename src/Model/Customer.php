@@ -17,8 +17,6 @@ class Customer implements ModelInterface
 
     private $cellphone;
 
-    private $birthdate;
-
     private $customer_address;
 
     public function __construct(
@@ -35,7 +33,6 @@ class Customer implements ModelInterface
         $this->income = $income;
         $this->email = $email;
         $this->cellphone = $cellphone;
-        $this->birthdate = $birthdate;
         $this->customer_address = $customer_address;
     }
 
@@ -48,7 +45,6 @@ class Customer implements ModelInterface
         $data['income'] = $this->income;
         $data['email'] = $this->email;
         $data['cellphone'] = $this->cellphone;
-        $data['birthdate'] = $this->birthdate;
         $data['customer_address'] = $this->customer_address->getEncodeParams();
 
         return $data;

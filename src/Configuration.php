@@ -10,13 +10,14 @@ class Configuration
 
     const HOMOLOG_URL = 'https://hml.usevirtus.com.br/api/';
 
-    const TOKEN = '4933f50a8a07a9f2a7b564eaac0b186ea0434bff';
+    private $token = '4933f50a8a07a9f2a7b564eaac0b186ea0434bff';
 
     private $environment = 'homolog';
 
-    public function setEnvironment(string $environment)
+    public function setEnvironment(string $environment, string $token)
     {
         $this->environment = $environment;
+        $this->token = $token;
     }
 
     public function getBaseUrl()
@@ -26,5 +27,10 @@ class Configuration
         }
 
         return self::PRODUCTION_URL;
+    }
+
+    public function getToken()
+    {
+        return $this->token;
     }
 }
