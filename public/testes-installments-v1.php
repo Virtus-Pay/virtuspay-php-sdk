@@ -11,7 +11,7 @@ $model = new \VirtusPay\ApiSDK\Model\Installments(
 );
 
 $gateway = new \VirtusPay\ApiSDK\Gateway\Installments();
-$response = $gateway->execute($model, 'v1');
+$response = $gateway->execute($model, 'v1', $configuration);
 
 echo $response;
 

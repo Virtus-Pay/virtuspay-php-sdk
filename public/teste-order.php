@@ -43,7 +43,7 @@ $order = new \VirtusPay\ApiSDK\Model\Order(
 );
 
 $gateway = new \VirtusPay\ApiSDK\Gateway\Order();
-$response = $gateway->save($order);
+$response = $gateway->save($order, $configuration);
 
 print '<pre>';
 print_r($response);

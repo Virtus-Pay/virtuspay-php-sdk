@@ -17,7 +17,7 @@ $cancelamento = new \VirtusPay\ApiSDK\Model\Cancelamento(
 );
 
 $gateway = new \VirtusPay\ApiSDK\Gateway\Cancelamento();
-$response = $gateway->execute('d971345d-b147-48a6-8cbb-ff8d1443bece', $cancelamento);
+$response = $gateway->execute('d971345d-b147-48a6-8cbb-ff8d1443bece', $cancelamento, $configuration);
 
 echo $response;
 

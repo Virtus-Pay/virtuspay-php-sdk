@@ -8,7 +8,7 @@ $configuration->setEnvironment('homolog');
 
 $gateway = new \VirtusPay\ApiSDK\Gateway\Order();
 $orderRef = "8000126";
-$response = $gateway->getOrderByOrderRef($orderRef);
+$response = $gateway->getOrderByOrderRef($orderRef, $configuration);
 
 print '<pre>';
 print_r($response);

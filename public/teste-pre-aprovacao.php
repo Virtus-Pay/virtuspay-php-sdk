@@ -17,7 +17,7 @@ $model = new \VirtusPay\ApiSDK\Model\PreAprovacao(
 );
 
 $gateway = new \VirtusPay\ApiSDK\Gateway\PreAprovacao();
-$response = $gateway->execute($model);
+$response = $gateway->execute($model, $configuration);
 
 echo $response;
 

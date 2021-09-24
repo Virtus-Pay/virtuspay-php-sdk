@@ -7,38 +7,35 @@ use VirtusPay\ApiSDK\Gateway as GatewaySend;
 
 class Order
 {
-    private $configuration;
-
     private $gateway;
 
     public function __construct()
     {
-        $this->configuration = new Configuration();
         $this->gateway = new GatewaySend();
     }
 
-    public function getAllOrders()
+    public function getAllOrders($configuration)
     {
-        $uri = $this->configuration->getBaseUrl()."v1/order";
-        return $this->gateway->execute('GET', $uri, "", $this->configuration->getToken());
+        $uri = $configuration->getBaseUrl()."v1/order";
+        return $this->gateway->execute('GET', $uri, "", $configuration->getToken());
     }
 
-    public function getOrderByTransaction($transaction)
+    public function getOrderByTransaction($transaction, $configuration)
     {
-        $uri = $this->configuration->getBaseUrl()."v1/order/".$transaction;
-        return $this->gateway->execute('GET', $uri, "", $this->configuration->getToken());
+        $uri = $configuration->getBaseUrl()."v1/order/".$transaction;
+        return $this->gateway->execute('GET', $uri, "", $configuration->getToken());
     }
 
-    public function getOrderByOrderRef($orderRef)
+    public function getOrderByOrderRef($orderRef, $configuration)
     {
-        $uri = $this->configuration->getBaseUrl()."v1/order?order_ref=".$orderRef;
-        return $this->gateway->execute('GET', $uri, "", $this->configuration->getToken());
+        $uri = $configuration->getBaseUrl()."v1/order?order_ref=".$orderRef;
+        return $this->gateway->execute('GET', $uri, "", $configuration->getToken());
     }
 
-    public function save($modelOrder)
+    public function save($modelOrder, $configuration)
     {
-        $uri = $this->configuration->getBaseUrl()."v1/order";
+        $uri = $configuration->getBaseUrl()."v1/order";
         $body = $modelOrder->getEncodeParams();
-        return $this->gateway->execute('POST', $uri, $body, $this->configuration->getToken());
+        return $this->gateway->execute('POST', $uri, $body, $configuration->getToken());
     }
 }

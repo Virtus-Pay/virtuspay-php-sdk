@@ -8,21 +8,14 @@ use VirtusPay\ApiSDK\Gateway as GatewaySend;
 class PreAprovacao
 {
 
-    private $configuration;
-
-    public function __construct()
+    public function execute($preAprovacaoModel, $configuration)
     {
-        $this->configuration = new Configuration();
-    }
-
-    public function execute($preAprovacaoModel)
-    {
-        $uri = $this->configuration->getBaseUrl()."preapproved";
+        $uri = $configuration->getBaseUrl()."preapproved";
         $body = $preAprovacaoModel->getEncodeParams();
 
         $gateway = new GatewaySend();
 
-        return $gateway->execute('POST', $uri, $body, $this->configuration->getToken());
+        return $gateway->execute('POST', $uri, $body, $configuration->getToken());
     }
 
 }

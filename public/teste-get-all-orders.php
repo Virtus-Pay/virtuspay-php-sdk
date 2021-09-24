@@ -6,7 +6,7 @@ $configuration = new \VirtusPay\ApiSDK\Configuration();
 $configuration->setEnvironment('homolog');
 
 $gateway = new \VirtusPay\ApiSDK\Gateway\Order();
-$response = $gateway->getAllOrders();
+$response = $gateway->getAllOrders($configuration);
 
 print '<pre>';
 print_r($response);
