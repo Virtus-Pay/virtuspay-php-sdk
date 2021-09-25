@@ -47,7 +47,7 @@ class PreAprovacao implements ModelInterface
         $data['cellphone'] = $this->cellphone;
         $data['email'] = $this->email;
         $data['ip'] = $this->ip;
-        $data['others_info'] = $this->others_infos;
+        $data['others_infos'] = $this->others_infos;
         $data['cep'] = $this->cep;
 
         return json_encode($data);
