@@ -2,7 +2,7 @@
   "name": "virtuspay/virtuspay-php-sdk",
   "description": "Biblioteca de integração com a VirtusPay",
   "type": "library",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "keywords": ["virtuspay","pay", "payment", "sdk"],
   "authors": [
     {

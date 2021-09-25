@@ -28,6 +28,8 @@ class Order implements ModelInterface
 
     private $preapproved;
 
+    private $others_infos;
+
     public function __construct(
         $order_ref,
         $customer,
@@ -39,7 +41,8 @@ class Order implements ModelInterface
         $callback,
         $return_url,
         $channel,
-        $preapproved
+        $preapproved,
+        $others_infos
     ) {
         $this->order_ref = $order_ref;
         $this->customer = $customer;
@@ -52,6 +55,7 @@ class Order implements ModelInterface
         $this->return_url = $return_url;
         $this->channel = $channel;
         $this->preapproved = $preapproved;
+        $this->others_infos = $others_infos;
     }
 
     public function getEncodeParams()
@@ -68,6 +72,7 @@ class Order implements ModelInterface
         $data['callback'] = $this->callback;
         $data['return_url'] = $this->return_url;
         $data['channel'] = $this->channel;
+        $data['orthers_infos'] = $this->others_infos;
 
         if (!is_null($this->preapproved)) {
            $data['preapproved'] = $this->preapproved;
