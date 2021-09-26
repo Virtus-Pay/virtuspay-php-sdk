@@ -72,7 +72,7 @@ class Order implements ModelInterface
         $data['callback'] = $this->callback;
         $data['return_url'] = $this->return_url;
         $data['channel'] = $this->channel;
-        $data['orthers_infos'] = $this->others_infos;
+        $data['extra_data']['others_infos'] = $this->others_infos;
 
         if (!is_null($this->preapproved)) {
            $data['preapproved'] = $this->preapproved;
